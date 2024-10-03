@@ -1,0 +1,49 @@
+.title {
+  color: rgba(255, 255, 255, 0);
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  height: 30vh;
+  padding-top: 10vh;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 5vh;
+  padding-left: 5vw;
+  padding-right:5vw;
+  
+
+  .Tic {
+    animation-name: AnimationTic;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .Tac {
+    animation-name: AnimationTic;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+  }
+
+  .Toe {
+    animation-name: AnimationTic;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+
+  }
+}
+
+@keyframes AnimationTic{
+    0% {
+        color: rgba(255, 255, 255, 0);   
+    }
+    100% {
+        color: white;
+    }
+
+}

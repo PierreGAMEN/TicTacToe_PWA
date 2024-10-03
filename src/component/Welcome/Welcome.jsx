@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./welcome.scss";
 
-const Welcome = () => {
+const Welcome = ({ handleCloseWelcome }) => {
   const [name, setName] = useState("");
   const [registerName, setRegisterName] = useState("");
   const [tooLongName, setTooLongName] = useState(false);
@@ -59,7 +59,7 @@ const Welcome = () => {
         </div>
       )}
       <div>
-        <button>Commencer</button>
+        <button onClick={handleCloseWelcome}>Commencer</button>
       </div>
       <button onClick={deconnexion}>Se déconnecter</button>
     </section>
