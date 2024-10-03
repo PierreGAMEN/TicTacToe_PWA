@@ -15,8 +15,7 @@ export const metadata: Metadata = {
   themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
   authors: [
     {
-      name: "imvinojanv",
-      url: "https://www.linkedin.com/in/imvinojanv/",
+      name: "PierreG",
     },
   ],
   viewport:
