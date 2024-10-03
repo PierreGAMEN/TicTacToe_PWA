@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./welcome.scss"
 
 const Welcome = () => {
   const [name, setName] = useState("");
@@ -22,7 +23,7 @@ const Welcome = () => {
   }, []);
 
   return (
-    <section>
+    <section className="welcome">
       {registerName ? (
         <h2>Bienvenue {registerName}</h2>
       ) : (
@@ -41,8 +42,8 @@ const Welcome = () => {
       )}
       <div>
         <button>Commencer</button>
-        <button onClick={deconnexion}>Se déconnecter</button>
       </div>
+      <button onClick={deconnexion}>Se déconnecter</button>
     </section>
   );
 };
