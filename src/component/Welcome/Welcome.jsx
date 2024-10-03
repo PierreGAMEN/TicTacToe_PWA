@@ -39,7 +39,7 @@ const Welcome = () => {
               id="name"
               type="text"
             />
-            <button onClick={setNewName}>OK</button>
+            <button className={`${name}` ? "ok" : "nok" }onClick={setNewName}>OK</button>
           </div>
         </div>
       )}

@@ -6,6 +6,13 @@
   justify-content: center;
   height: 100vh;
 
+  button {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    border: none;
+  }
+
   .container_input {
     display: flex;
     flex-direction: column;
@@ -13,14 +20,35 @@
     align-items: center;
 
     .input_ok {
-        display: flex;
+      display: flex;
 
-        button, input {
-            padding: 0.5rem;
-            
-        }
+      button,
+      input {
+        padding: 0.5rem;
+      }
 
-      
+      button {
+        border-radius: 0px 10px 10px 0px;
+        border: 1px solid black;
+        border-left: none;
+        transition: 0.3s;
+      }
+
+      input {
+        border-radius: 10px 0px 0px 10px;
+        border-right: none;
+        border: 1px solid black;
+      }
+
+      .ok {
+        background-color: green;
+        color: white;
+      }
+
+      .nok {
+        background-color: red;
+        color: white;
+      }
     }
 
     input {
