@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./welcome.scss"
+import "./welcome.scss";
 
 const Welcome = () => {
   const [name, setName] = useState("");
@@ -8,6 +8,7 @@ const Welcome = () => {
   const setNewName = () => {
     localStorage.setItem("name", name);
     setRegisterName(name);
+    setName("")
   };
 
   const deconnexion = () => {
@@ -27,17 +28,19 @@ const Welcome = () => {
       {registerName ? (
         <h2>Bienvenue {registerName}</h2>
       ) : (
-        <div>
+        <div className="container_input">
           <label htmlFor="name">Nom d&apos;utilisateur</label>
-          <input
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-            value={name}
-            id="name"
-            type="text"
-          />
-          <button onClick={setNewName}>OK</button>
+          <div className="input_ok">
+            <input
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+              value={name}
+              id="name"
+              type="text"
+            />
+            <button onClick={setNewName}>OK</button>
+          </div>
         </div>
       )}
       <div>

@@ -1,6 +1,6 @@
 {
     "name": "TicTacToe",
-    "short_name": "TTT",
+    "short_name": "TicTacToe",
     "theme_color": "#35155D",
     "background_color": "#ffffff",
     "display": "standalone",
