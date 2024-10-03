@@ -1,16 +1,22 @@
 .welcome {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  color: white;
 
   button {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.158);
     color: black;
     border-radius: 10px;
     border: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    width: 50vw;
+    max-width: 600px;
   }
 
   .container_input {
@@ -25,11 +31,12 @@
       button,
       input {
         padding: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.247);
       }
 
       button {
-        border-radius: 0px 10px 10px 0px;
-        border: 1px solid black;
+        border-radius: 0px 5px 5px 0px;
+
         border-left: none;
         transition: 0.3s;
         min-width: 50px;
@@ -38,18 +45,23 @@
       }
 
       input {
-        border-radius: 10px 0px 0px 10px;
+        border-radius: 5px 0px 0px 5px;
         border-right: none;
-        border: 1px solid black;
+        border: none;
+        color: white;
+      }
+
+      input:focus {
+        outline: none;
       }
 
       .ok {
-        background-color: green;
+        background-color: rgba(0, 128, 0, 0.384);
         color: white;
       }
 
       .nok {
-        background-color: red;
+        background-color: rgba(255, 0, 0, 0.349);
         color: white;
       }
     }
