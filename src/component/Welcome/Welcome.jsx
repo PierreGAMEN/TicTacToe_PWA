@@ -4,11 +4,17 @@ import "./welcome.scss";
 const Welcome = () => {
   const [name, setName] = useState("");
   const [registerName, setRegisterName] = useState("");
+  const [tooLongName, setTooLongName] = useState(false);
 
   const setNewName = () => {
-    localStorage.setItem("name", name);
-    setRegisterName(name);
-    setName("")
+    if (name.length > 15) {
+      setTooLongName(true);
+    } else {
+      setTooLongName(false);
+      localStorage.setItem("name", name);
+      setRegisterName(name);
+      setName("");
+    }
   };
 
   const deconnexion = () => {
@@ -26,7 +32,10 @@ const Welcome = () => {
   return (
     <section className="welcome">
       {registerName ? (
-        <h2>Bienvenue {registerName}</h2>
+        <div>
+          <h2>Bienvenue</h2>
+          <h2>{registerName}</h2>
+        </div>
       ) : (
         <div className="container_input">
           <label htmlFor="name">Nom d&apos;utilisateur</label>
@@ -39,8 +48,14 @@ const Welcome = () => {
               id="name"
               type="text"
             />
-            <button className={`${name}` ? "ok" : "nok" }onClick={setNewName}>OK</button>
+            <button
+              className={name && name.length <= 15 ? "ok" : "nok"}
+              onClick={setNewName}
+            >
+              OK
+            </button>
           </div>
+          {tooLongName && <div>Attention ce nom est trop long</div>}
         </div>
       )}
       <div>
