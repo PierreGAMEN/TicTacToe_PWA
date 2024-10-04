@@ -68,11 +68,11 @@ const YourNumber = () => {
       <h2>Vous faites deviner</h2>
       {!answer && <>
       <p>Veuillez choisir la plage de jeu </p>
-      <div>
+      <div className="container_input">
         <label htmlFor="min">Minimum</label>
         <input value={minNumber} onChange={getMinimum} type="number" id="min" />
       </div>
-      <div>
+      <div className="container_input">
         <label htmlFor="max">Maximum</label>
         <input value={maxNumber} onChange={getMaximum} type="number" id="max" />
       </div>
@@ -86,11 +86,11 @@ const YourNumber = () => {
       {!win && <>
       
       {answer > 0 && <p>Le nombre proposé est : {answer}</p>}
-      <div>
+      {answer > 0 && <div>
         <button onClick={changeMinAndGiveAnAnswer}>C&apos;est plus</button>
         <button onClick={changeMaxAndGiveAnAnswer}>C&apos;est moins</button>
         <button onClick={() => {setWin(true)}}>C&apos;est exact</button>
-      </div>
+      </div>}
       </>}
       {win && <div>
         <p>Party_Robot a encore gagné !</p>

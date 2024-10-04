@@ -13,6 +13,10 @@
     height: 100vh;
     padding: 2rem;
 
+    h2 {
+        margin-bottom: 2rem;
+    }
+
 
     button, input {
         padding: 1rem;
@@ -23,14 +27,22 @@
     input {
         margin-bottom: 1rem;
         margin-top: 1rem;
+        text-align: center;
     }
 
     button {
         width: 300px;
+        border: none;
     }
     .container_button_guess {
         display: flex;
         max-width: 90vw;
+        margin-top: 1rem;
+    }
+
+    .container_input {
+        display: flex;
+        flex-direction: column;
         margin-top: 1rem;
     }
 }
