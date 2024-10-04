@@ -2,11 +2,12 @@
 import { useState } from "react";
 import YouGuess from "./YouGuess";
 import YourNumber from "./YourNumber";
+import './index.scss'
 
 const RightPrice = () => {
   const [gameMode, setGameMode] = useState("");
   return (
-    <section>
+    <section className="RightPrice">
         {!gameMode && <>
       <p>Bonjour et bienvenue au jeu du juste prix !</p>
       <p>Quel mode de jeu voulez-vous jouer ?</p>
