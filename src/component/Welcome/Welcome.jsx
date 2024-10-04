@@ -59,9 +59,9 @@ const Welcome = ({ handleCloseWelcome }) => {
         </div>
       )}
       <div>
-        <button onClick={handleCloseWelcome}>Commencer</button>
+        {registerName && <button onClick={handleCloseWelcome}>Commencer</button>}
       </div>
-      <button onClick={deconnexion}>Se déconnecter</button>
+      {registerName && <button onClick={deconnexion}>Se déconnecter</button>}
     </section>
   );
 };

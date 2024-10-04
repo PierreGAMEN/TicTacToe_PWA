@@ -6,6 +6,11 @@
   justify-content: center;
   color: white;
   text-align: center;
+  animation-name: AnimationTic;
+  animation-duration: 0.8s;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 
   button {
     background-color: rgba(255, 255, 255, 0.158);
@@ -70,5 +75,14 @@
     input {
       font-size: 20px;
     }
+  }
+}
+
+@keyframes AnimationTic {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
