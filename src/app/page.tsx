@@ -28,8 +28,8 @@ export default function Home() {
         {welcomePage && <Welcome handleCloseWelcome={handleCloseWelcome} />}
         {(!welcomePage && !chosenGame) && (
           <div>
-            <li onClick={chooseAGame}>Tic Tac Toe</li>
-            <li onClick={chooseAGame}>Pierre feuille ciseaux</li>
+            {/* <li onClick={chooseAGame}>Tic Tac Toe</li>
+            <li onClick={chooseAGame}>Pierre feuille ciseaux</li> */}
             <li onClick={chooseAGame}>Le juste prix</li>
           </div>
         )}
