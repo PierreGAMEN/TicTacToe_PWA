@@ -7,6 +7,11 @@
     flex-direction: column;
     gap: 2rem;
     padding-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
 
     button, input {
         padding: 1rem;
