@@ -3,8 +3,9 @@ import "./animateTitle.scss";
 const AnimateTitle = () => {
   return (
     <div className="title">
-      <div className="Tic">Mini</div>
-      <div className="Tac">Game</div>
+      <div className="mini">Mini</div>
+      <div className="game">Game</div>
+      <div className="party">Party</div>
 
     </div>
   );

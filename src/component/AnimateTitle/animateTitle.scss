@@ -1,5 +1,5 @@
 .title {
-  color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
   font-size: 3rem;
   font-weight: bold;
   display: flex;
@@ -13,37 +13,44 @@
   padding-left: 5vw;
   padding-right:5vw;
   
+  
 
-  .Tic {
+  .mini {
     animation-name: AnimationTic;
-    animation-duration: 1s;
     animation-delay: 1s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
+    opacity: 0;
   }
 
-  .Tac {
+  .game {
     animation-name: AnimationTic;
-    animation-duration: 1s;
-    animation-delay: 2s;
+    animation-duration: 0.8s;
+    animation-delay: 1.8s;
     animation-fill-mode: forwards;
+    opacity: 0;
 
   }
 
-  .Toe {
+  .party {
     animation-name: AnimationTic;
-    animation-duration: 1s;
-    animation-delay: 3s;
+    animation-duration: 0.8s;
+    animation-delay: 2.6s;
     animation-fill-mode: forwards;
+    opacity: 0;
+    
 
   }
 }
 
 @keyframes AnimationTic{
     0% {
-        color: rgba(255, 255, 255, 0);   
+        opacity: 0; 
     }
     100% {
-        color: white;
+        opacity: 1;
     }
 
 }
+
+
