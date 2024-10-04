@@ -52,7 +52,7 @@ const YouGuess = () => {
         name="answer"
       />
       <button onClick={moreLessWin}>Ok</button>
-      <div>
+      <div className="container_button_guess">
         <button
           onClick={() => {
             addToAnswer(1);
@@ -89,7 +89,7 @@ const YouGuess = () => {
           +100
         </button>
       </div>
-      <div>
+      <div className="container_button_guess">
         <button
           onClick={() => {
             substractToAnswer(1);
