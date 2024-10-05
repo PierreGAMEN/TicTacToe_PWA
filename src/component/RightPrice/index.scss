@@ -63,11 +63,7 @@
         margin-top: 1rem;
     }
     
-    .container_input {
-        display: flex;
-        flex-direction: column;
-        margin-top: 1rem;
-    }
+   
 
     &_container_GameMode {
         display: flex;
@@ -99,6 +95,31 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        .rule {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            font-size: 1rem;
+            padding: 1rem;
+            text-align: justify;
+            border: 5px solid rgb(56, 182, 255);
+        }
+
+        .container_input {
+            display: flex;
+            margin-top: 1rem;
+            font-size: 1rem;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            input {
+                width: 100%;
+            }
+
+        }
 
 
         button {
