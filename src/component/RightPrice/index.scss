@@ -12,16 +12,33 @@
     justify-content: center;
     height: 100vh;
     padding: 2rem;
+    background-image: url('/bg_RP.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+    &_title {
+        display: flex;
+        gap: 1rem;
+        font-size: 3rem;
+        height: 40vh;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        flex-direction: column;
+
+    }
+
+    
     h2 {
         margin-bottom: 2rem;
     }
-
-
+    
+    
     button, input {
         padding: 1rem;
-        background-color: rgba(255, 255, 255, 0.199);
-        color: white;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         font-weight: bold
     }
     input {
@@ -29,20 +46,123 @@
         margin-top: 1rem;
         text-align: center;
     }
-
+    
     button {
         width: 300px;
         border: none;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+        border: 5px solid rgb(56, 182, 255);
     }
     .container_button_guess {
         display: flex;
         max-width: 90vw;
         margin-top: 1rem;
     }
-
+    
     .container_input {
         display: flex;
         flex-direction: column;
         margin-top: 1rem;
     }
+
+    &_container_GameMode {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        button {
+            background-color: rgb(255, 255, 255);
+            color: black;
+         
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px 1px;
+            animation-name: buttonAnim;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            width: 200px;
+        }
+
+        :last-child {
+            animation-delay: 0.5s;
+        }
+
+
+    }
+
+    .YourNumber {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+
+        button {
+            width: 100%;
+        }
+
+        .container_button {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .container_robot {
+            position: relative;
+            margin-top: 10vh;
+
+            .robot {
+                height: 40vh;
+             
+            }
+    
+            .answer {
+                padding: 1rem;
+                background-color: rgb(255, 229, 172);
+                border: 5px solid rgb(56, 182, 255);
+                position: absolute;
+                top: 1;
+                right: 1;
+                color: black;
+                border-radius: 10px;
+                animation-name: answerAnim;
+                animation-duration: 0.5s;
+                animation-delay: 1s;
+                opacity: 0;
+                animation-fill-mode: forwards;
+            }
+
+        }
+
+        
+    }
+
+}
+
+@keyframes buttonAnim {
+
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+  
+}
+
+@keyframes answerAnim {
+
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    100%{
+        display: block;
+        opacity: 1;
+    }
+ 
 }

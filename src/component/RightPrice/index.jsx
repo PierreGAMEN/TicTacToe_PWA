@@ -2,34 +2,48 @@
 import { useState } from "react";
 import YouGuess from "./YouGuess";
 import YourNumber from "./YourNumber";
-import './index.scss'
+import "./index.scss";
 
 const RightPrice = () => {
   const [gameMode, setGameMode] = useState("");
   return (
     <section className="RightPrice">
-        {!gameMode && <>
-      <p>Bonjour et bienvenue au jeu du juste prix !</p>
-      <p>Quel mode de jeu voulez-vous jouer ?</p>
-      <button
-        id="1"
-        onClick={(e) => {
-          setGameMode(e.target.id);
-        }}
-      >
-        Vous devinez un nombre
-      </button>
-      <button
-        id="2"
-        onClick={(e) => {
-          setGameMode(e.target.id);
-        }}
-      >
-        Vous faites deviner un nombre
-      </button></>}
+      {!gameMode && (
+        <>
+          <div className="RightPrice_title">
+            <p>Le</p>
+            <p>juste</p>
+            <p>Prix</p>
+          </div>
+          <div className="RightPrice_container_GameMode">
+            <button
+              id="1"
+              onClick={(e) => {
+                setGameMode(e.target.id);
+              }}
+            >
+              Vous êtes candidat
+            </button>
+            <button
+              id="2"
+              onClick={(e) => {
+                setGameMode(e.target.id);
+              }}
+            >
+              Party_Robot est candidat
+            </button>
+          </div>
+        </>
+      )}
       {gameMode == "1" && <YouGuess />}
       {gameMode == "2" && <YourNumber />}
-      <button onClick={() => {setGameMode("")}}>Retour aux différents mode</button>
+      {gameMode && <button
+        onClick={() => {
+          setGameMode("");
+        }}
+      >
+        Retour aux différents mode
+      </button>}
       <button>Retour aux différents jeux</button>
     </section>
   );

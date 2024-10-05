@@ -5,9 +5,11 @@ const YourNumber = () => {
   const [maxNumber, setMaxNumber] = useState(100);
   const [answer, setAnswer] = useState(0);
   const [win, setWin] = useState(false)
+  const [numberOfTry, SetnumberOfTry] = useState(0)
 
   const getFirstNumber = () => {
-    setAnswer(Math.floor((maxNumber + minNumber) / 2)); 
+    setAnswer(Math.floor((maxNumber + minNumber) / 2));
+    SetnumberOfTry(numberOfTry + 1)
   };
 
   const getMinimum = (e) => {
@@ -21,51 +23,42 @@ const YourNumber = () => {
   };
 
   const changeMinAndGiveAnAnswer = () => {
+    SetnumberOfTry(numberOfTry + 1)
     setMinNumber(answer); 
     const diff = maxNumber - answer;
-
-    if (diff > 100) {
-      setAnswer(answer + 100);
-    } else if (diff > 50) {
-      setAnswer(answer + 50);
-    } else if (diff > 10) {
-      setAnswer(answer + 10);
-    } else if (diff > 5) {
-      setAnswer(answer + 5);
-    } else if (diff > 1) {
-        setAnswer(answer + 1);
-  };
+    if (diff > 2) {
+      setAnswer(answer + Math.round((diff/2)));
+    }
+    else {
+      setAnswer(answer + 1)
+    }
 }
 
   const changeMaxAndGiveAnAnswer = () => {
-    setMaxNumber(answer); // Ajuster le maximum à la réponse actuelle
+    SetnumberOfTry(numberOfTry + 1)
+    setMaxNumber(answer); 
     const diff = answer - minNumber;
-
-    if (diff > 100) {
-      setAnswer(answer - 100);
-    } else if (diff > 50) {
-      setAnswer(answer - 50);
-    } else if (diff > 10) {
-      setAnswer(answer - 10);
-    } else if (diff > 5) {
-      setAnswer(answer - 5);
-    } else if (diff > 1) {
-        setAnswer(answer - 1);
-  };
-  };
+    if (diff > 2) {
+      setAnswer(answer - Math.round((diff/2)));
+    }
+    else {
+      setAnswer(answer - 1)
+    }
+  }
 
   const reMatch = () => {
     setMinNumber(0)
     setMaxNumber(100)
     setAnswer(0)
     setWin(false)
+    SetnumberOfTry(0)
   }
 
 
 
   return (
-    <section>
-      <h2>Vous faites deviner</h2>
+    <section className="YourNumber">
+  
       {!answer && <>
       <p>Veuillez choisir la plage de jeu </p>
       <div className="container_input">
@@ -84,13 +77,17 @@ const YourNumber = () => {
       )}
       </>}
       {!win && <>
-      
-      {answer > 0 && <p>Le nombre proposé est : {answer}</p>}
-      {answer > 0 && <div>
+      {answer > 0 && <div className="container_button">
         <button onClick={changeMinAndGiveAnAnswer}>C&apos;est plus</button>
         <button onClick={changeMaxAndGiveAnAnswer}>C&apos;est moins</button>
         <button onClick={() => {setWin(true)}}>C&apos;est exact</button>
       </div>}
+      <div className="container_robot">
+      {answer > 0 && <p className="answer">{answer}</p>}
+      {answer > 0 && <img className="robot" src="robot0.svg"></img>}
+      </div>
+      
+      {answer > 0 && <div>Tentative: {numberOfTry}</div>}
       </>}
       {win && <div>
         <p>Party_Robot a encore gagné !</p>
