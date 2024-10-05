@@ -4,7 +4,7 @@ import YouGuess from "./YouGuess";
 import YourNumber from "./YourNumber";
 import "./index.scss";
 
-const RightPrice = () => {
+const RightPrice = ({setChosenGame}) => {
   const [gameMode, setGameMode] = useState("");
   return (
     <section className="RightPrice">
@@ -44,7 +44,7 @@ const RightPrice = () => {
       >
         Retour aux différents mode
       </button>}
-      <button>Retour aux différents jeux</button>
+      <button onClick={() => setChosenGame("")}>Retour aux différents jeux</button>
     </section>
   );
 };

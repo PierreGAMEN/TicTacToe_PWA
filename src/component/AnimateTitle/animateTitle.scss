@@ -15,32 +15,32 @@
   
   
 
-  .mini {
-    animation-name: AnimationTic;
-    animation-delay: 1s;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-  }
+  // .mini {
+  //   animation-name: AnimationTic;
+  //   animation-delay: 1s;
+  //   animation-duration: 0.8s;
+  //   animation-fill-mode: forwards;
+  //   opacity: 0;
+  // }
 
-  .game {
-    animation-name: AnimationTic;
-    animation-duration: 0.8s;
-    animation-delay: 1.8s;
-    animation-fill-mode: forwards;
-    opacity: 0;
+  // .game {
+  //   animation-name: AnimationTic;
+  //   animation-duration: 0.8s;
+  //   animation-delay: 1.8s;
+  //   animation-fill-mode: forwards;
+  //   opacity: 0;
 
-  }
+  // }
 
-  .party {
-    animation-name: AnimationTic;
-    animation-duration: 0.8s;
-    animation-delay: 2.6s;
-    animation-fill-mode: forwards;
-    opacity: 0;
+  // .party {
+  //   animation-name: AnimationTic;
+  //   animation-duration: 0.8s;
+  //   animation-delay: 2.6s;
+  //   animation-fill-mode: forwards;
+  //   opacity: 0;
     
 
-  }
+  // }
 }
 
 @keyframes AnimationTic{

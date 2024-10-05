@@ -27,15 +27,15 @@ export default function Home() {
         {!chosenGame && <AnimateTitle />}
         {welcomePage && <Welcome handleCloseWelcome={handleCloseWelcome} />}
         {(!welcomePage && !chosenGame) && (
-          <div>
-            {/* <li onClick={chooseAGame}>Tic Tac Toe</li>
-            <li onClick={chooseAGame}>Pierre feuille ciseaux</li> */}
+          <div className="container_games">
+            {/* <li onClick={chooseAGame}>Tic Tac Toe</li> */}
+            <li onClick={chooseAGame}>Pierre feuille ciseaux</li>
             <li onClick={chooseAGame}>Le juste prix</li>
           </div>
         )}
         {/* {chosenGame === "Tic Tac Toe" && <TicTacToe />} */}
         {/* {chosenGame === "Pierre feuille ciseaux" && <PFC />} */}
-        {chosenGame === "Le juste prix" && <RightPrice />}
+        {chosenGame === "Le juste prix" && <RightPrice setChosenGame={setChosenGame}/>}
       </main>
     </div>
   );
