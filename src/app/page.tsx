@@ -3,6 +3,7 @@
 import Welcome from "@/component/Welcome/Welcome";
 import AnimateTitle from "@/component/AnimateTitle/AnimateTitle";
 import RightPrice from "@/component/RightPrice";
+import PFC from "@/component/PFC";
 import styles from "./page.module.css";
 import { useState } from "react";
 import "./page.scss";
@@ -34,7 +35,7 @@ export default function Home() {
           </div>
         )}
         {/* {chosenGame === "Tic Tac Toe" && <TicTacToe />} */}
-        {/* {chosenGame === "Pierre feuille ciseaux" && <PFC />} */}
+        {chosenGame === "Pierre feuille ciseaux" && <PFC />}
         {chosenGame === "Le juste prix" && <RightPrice setChosenGame={setChosenGame}/>}
       </main>
     </div>
